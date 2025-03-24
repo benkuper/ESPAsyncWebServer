@@ -933,7 +933,7 @@ IPAddress AsyncWebSocketClient::remoteIP()
 {
   if (!_client)
   {
-#ifdef ARDUINO_NEW_VERSION
+#if ESP_ARDUINO_VERSION >= 3
     return IPAddress((uint32_t)0U);
     #else
     return IPAddress(0U);
